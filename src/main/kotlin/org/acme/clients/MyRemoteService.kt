@@ -9,7 +9,7 @@ import org.acme.entities.TestEntity
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient
 
 @Singleton
-@RegisterRestClient(configKey = "test-api")
+@RegisterRestClient
 @Path("/api")
 interface MyRemoteService {
 

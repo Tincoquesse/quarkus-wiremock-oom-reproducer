@@ -15,6 +15,7 @@ import org.acme.entities.TestEntity
 import org.acme.enums.SourceData.DYNAMO
 import org.acme.enums.SourceData.REMOTE
 import org.acme.models.TestEntityModel
+import org.acme.utils.BaseTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

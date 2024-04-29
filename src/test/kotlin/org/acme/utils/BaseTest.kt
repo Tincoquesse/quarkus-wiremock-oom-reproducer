@@ -1,4 +1,4 @@
-package org.acme
+package org.acme.utils
 
 import com.github.tomakehurst.wiremock.client.WireMock
 import io.quarkiverse.wiremock.devservice.ConnectWireMock
