@@ -1,7 +1,5 @@
 package org.acme.utils
 
-import com.github.tomakehurst.wiremock.client.WireMock
-import io.quarkiverse.wiremock.devservice.ConnectWireMock
 import org.acme.config.DynamoDbTestClient
 import org.acme.config.DynamoDbTestClientImpl
 import org.acme.entities.TestEntity
@@ -14,7 +12,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 
-@ConnectWireMock
+//@ConnectWireMock
 open class BaseTest : WiremockTestResource() {
 
     companion object {

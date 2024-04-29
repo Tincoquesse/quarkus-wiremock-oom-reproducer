@@ -5,6 +5,7 @@ import com.github.tomakehurst.wiremock.client.WireMock.equalTo
 import com.github.tomakehurst.wiremock.client.WireMock.get
 import com.github.tomakehurst.wiremock.client.WireMock.okJson
 import com.github.tomakehurst.wiremock.client.WireMock.urlPathMatching
+import io.quarkus.test.common.QuarkusTestResource
 import io.quarkus.test.junit.QuarkusTest
 import io.restassured.http.ContentType.JSON
 import io.restassured.module.kotlin.extensions.Extract
@@ -16,10 +17,12 @@ import org.acme.enums.SourceData.DYNAMO
 import org.acme.enums.SourceData.REMOTE
 import org.acme.models.TestEntityModel
 import org.acme.utils.BaseTest
+import org.acme.utils.WiremockTestResource
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 @QuarkusTest
+@QuarkusTestResource(WiremockTestResource::class)
 class MyRemoteControllerTest1 : BaseTest() {
 
     @Test
