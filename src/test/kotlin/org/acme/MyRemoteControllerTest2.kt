@@ -72,7 +72,7 @@ class MyRemoteControllerTest2 : BaseTest() {
         val givenDto = ObjectMapper().writeValueAsString(givenEntity)
 
         Given {
-            wiremock.register(
+            wiremock.stubFor(
                 get(urlPathMatching("/api/remote"))
                     .withQueryParam("id", equalTo(givenId))
                     .willReturn(okJson(givenDto))
@@ -140,7 +140,7 @@ class MyRemoteControllerTest2 : BaseTest() {
         val givenDto = ObjectMapper().writeValueAsString(givenEntity)
 
         Given {
-            wiremock.register(
+            wiremock.stubFor(
                 get(urlPathMatching("/api/remote"))
                     .withQueryParam("id", equalTo(givenId))
                     .willReturn(okJson(givenDto))

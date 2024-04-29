@@ -15,10 +15,10 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 
 @ConnectWireMock
-open class BaseTest {
+open class BaseTest : WiremockTestResource() {
 
     companion object {
-        lateinit var wiremock: WireMock
+//        lateinit var wiremock: WireMock
         lateinit var dynamoTestRepository: DynamoDbTestClient<TestEntity>
 
         @JvmStatic
